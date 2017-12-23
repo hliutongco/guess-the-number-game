@@ -6,7 +6,7 @@ puts "I have generated a random number for you to guess. What is your guess?"
 #If user input matches the random number variable, the player wins the game
 #Otherwise the player is asked to guess again
 #Subsequent guesses tell the player whether the random number variable is higher or lower than their guess
-#The 'C' input allows the player to cheat by displaying the random number
+#The 'Cheat' input allows the player to cheat by displaying the random number
 
 class Game
 
