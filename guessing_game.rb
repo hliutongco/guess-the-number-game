@@ -10,14 +10,16 @@ puts "I have generated a random number for you to guess. What is your guess?"
 
 class Game
 
-  RANDOM_NUMBER = rand(100)
+  def initialize
+    @random_number = rand(100)
+  end
 
   def play
     guess = gets.chomp
     if guess_valid?(guess.to_i)
       guess_check(guess.to_i)
     elsif guess == "Cheat"
-      puts RANDOM_NUMBER
+      puts @random_number
       play
     else
       puts "Enter a valid number between 1-100"
@@ -30,9 +32,9 @@ class Game
   end
 
   def guess_check(guess)
-    if guess == RANDOM_NUMBER
+    if guess == @random_number
       puts "You won!"
-    elsif guess > RANDOM_NUMBER
+    elsif guess > @random_number
       puts "No, my number is lower!"
       play
     else
